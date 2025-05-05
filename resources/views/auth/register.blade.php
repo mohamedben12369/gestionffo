@@ -1,0 +1,134 @@
+<form method="POST" action="{{ route('register') }}">
+    @csrf
+<style>/* Styles for the register page */
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333333;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 10px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    p {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666666;
+    }
+    
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+    }
+    
+    .register-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    
+    .register-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .register-container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .register-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .register-container button:hover {
+        background-color: #218838;
+    }</style>
+    <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required autofocus>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" required>
+    </div>
+
+    <div>
+        <label for="password_confirmation">Confirm Password</label>
+        <input id="password_confirmation" type="password" name="password_confirmation" required>
+    </div>
+
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>
